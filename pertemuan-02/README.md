@@ -1,6 +1,6 @@
 # pertemuan-02
-NIM : 2511500084
-Nama : Salsabillah Rimadany
+NIM : 2511500084<br>
+Nama : Salsabillah Rimadany<br>
 
-Hari ini, Kamis 02.okt.2025 kami belajar:
-1)
+Hari ini, Kamis 02.okt.2025 kami belajar:<br>
+1) 
