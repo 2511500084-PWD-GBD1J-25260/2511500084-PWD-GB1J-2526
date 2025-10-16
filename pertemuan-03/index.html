@@ -85,18 +85,38 @@
     </section>
     <section id="contact">
     <h2>Kontak Kami</h2>
-    <form action="" method="GET">
-        <label for="txtNama">Nama:</label>
-        <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama" required autocomplete="name">
+    <form action="proses.php" method="post">
+        <fieldset>
+            <legend>Data Mahasiswa</legend>
 
-        <label for="txtEmail">Email:</label>
-        <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan email" required autocomplete="email">
+        <label for="txtNama">Nama:</label>
+        <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama lengkap" required>
+
+        <label for="rdoGenderL">Jenis Kelamin:</label>
+        <input type="radio" id="rdoGenderL" name="rdoGenderL" value="L" checked> Laki-laki
+        <inputtype="radio" id="rdoGenderP" name="rdoGenderP" value="P"> Perempuan
+
+        <label for="cbHobi1"></label>
+        <input type="checkbox" id="cbHobi1" name="cbHobi[]" value="Mendengarkan musik" checked> Mendengarkan musik
+        <input type="checkbox" id="cbHobi2" name="cbHobi[]" value="Memasak"> Memasak
+    
+        <label for="s1Prodi">Program Studi:</label>
+        <select id="s1Prodi" name="s1Prodi" required>
+            <option value="">-- Pilih --</option>
+            <option value="TI">Teknik Informatika</option>
+            <option value="SI">Sistem Informatika</option>
+        </select>
 
         <label for="txtPesan">Pesan:</label>
-        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+        <textarea id="txtPesan" name="txtPesan" rows="3" placeholder="Tulis pesan anda..."></textarea>
 
-        <button type="submit">Kirim</button>
+        <input type="hidden" name="txtHidden" value="Rahasia">
+
+        <div class="form-actions">
+        <button type="submit" name="btnKirim">Kirim</button>
         <button type="reset">Batal</button>
+        </div>
+    </fieldset>
     </form>
     </section>
     </main>
