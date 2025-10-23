@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,13 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
+  #contact {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
   #about h2 {
     color: #003366;
     border-bottom: 2px solid #003366;
@@ -53,9 +61,10 @@
   }
 </style>
 </head>
+
 <body>
 </header>
-    <h1></h1>
+    <h1>Ini Header</h1>
         <nav>
             <ul>
             <li><a href="#home">Beranda</a></li>
@@ -85,38 +94,21 @@
     </section>
     <section id="contact">
     <h2>Kontak Kami</h2>
-    <form action="proses.php" method="post">
+    <form action="" method="GET">
         <fieldset>
             <legend>Data Mahasiswa</legend>
 
         <label for="txtNama">Nama:</label>
-        <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama lengkap" required>
+        <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama lengkap" required autocomplete="name">
 
-        <label for="rdoGenderL">Jenis Kelamin:</label>
-        <input type="radio" id="rdoGenderL" name="rdoGenderL" value="L"> Laki-laki
-        <input type="radio" id="rdoGenderP" name="rdoGenderP" value="P" checked> Perempuan
+        <label for="txtEmail"Email:</label>
+            <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan email" required autocomplete="email">
 
-        <label for="cbHobi1"></label>
-        <input type="checkbox" id="cbHobi1" name="cbHobi[]" value="Mendengarkan musik" checked> Mendengarkan musik
-        <input type="checkbox" id="cbHobi2" name="cbHobi[]" value="Memasak"> Memasak
+        <label for="txtPesan">Pesan</label>
+        <textarea id="txtPesan" name="=txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
     
-        <label for="s1Prodi">Program Studi:</label>
-        <select id="s1Prodi" name="s1Prodi" required>
-            <option value="">-- Pilih --</option>
-            <option value="TI">Teknik Informatika</option>
-            <option value="SI">Sistem Informatika</option>
-        </select>
-
-        <label for="txtPesan">Pesan:</label>
-        <textarea id="txtPesan" name="txtPesan" rows="3" placeholder="Tulis pesan anda..."></textarea>
-
-        <input type="hidden" name="txtHidden" value="Rahasia">
-
-        <div class="form-actions">
-        <button type="submit" name="btnKirim">Kirim</button>
+        <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
-        </div>
-    </fieldset>
     </form>
     </section>
     </main>
@@ -124,3 +116,5 @@
     <p>&copy; 2025 Salsabiilah Rimadany [2511500084]</p>
 </footer>
 </body>
+
+</html>
