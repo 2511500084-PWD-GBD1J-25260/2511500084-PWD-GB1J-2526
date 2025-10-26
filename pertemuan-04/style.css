@@ -165,6 +165,6 @@ header li a {
     }
     header li a:active {
       background-color: #cc04a1;
-      transform: translate(1px);
+      transform: translateY(1px);
     }
   }
