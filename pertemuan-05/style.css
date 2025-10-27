@@ -167,6 +167,15 @@ header li a {
       background-color: #cc04a1;
       transform: translateY(1px);
     }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    
     @media (Max-width: 600px) {
       header {
         padding: 16px;
