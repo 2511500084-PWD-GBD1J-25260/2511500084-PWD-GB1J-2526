@@ -40,8 +40,8 @@ border-bottom: 1px solid #e6e6e6;
 min-width: 180px;
 color: #003366;
 font-weight: 600;
-text-align: right;
-padding-right: 16px;
+text-align: left;
+padding-left: 16px;
 flex-shrink: 0;
 }
 
@@ -64,8 +64,8 @@ box-sizing: border-box;
 
 #about strong,
 #contact label>span {
-text-align: left;
-padding-right: 0;
+text-align: right;
+padding-left: 0;
 margin-bottom: 2px;
 }
 #contact input,
