@@ -95,7 +95,7 @@ width: 100%;
     $Nama_kakak = "Amellia Febriani dan Muhammad Ramsey";
     $Nama_adik = "Tidak ada";
     ?>
-    <h2>  &#128526;TENTANG SAYA &#128526; </h2>
+    <h2>TENTANG SAYA</h2>
           <p><strong>NIM:</strong><?php echo "$nim";?></p> 
           <P><strong>Nama Lengkap:</strong><?php echo "$Nama_Lengkap";?></P>
           <P><strong>Tempat lahir:</strong><?php echo "$Tempat_Lahir";?></P>
