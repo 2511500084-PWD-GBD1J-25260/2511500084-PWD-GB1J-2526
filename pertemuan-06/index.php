@@ -107,7 +107,8 @@ width: 100%;
           <P><strong>Nama kakak:</strong><?php echo "$Nama_kakak";?></P>
           <P><strong>Nama adik:</strong><?php echo "$Nama_adik";?></p>
  
-
+  </section>
+    <section id="about">
     <?php
 $namaMatkul1 = "Algoritma dan Struktur Data";
 $sksMatkul1 = 4;
@@ -309,7 +310,7 @@ $IPK = $totalSKS > 0 ? $totalBobot / $totalSKS : 0;
         <div><span class="label">Total SKS :</span> <span class="value"><?php echo $totalSKS; ?></span></div>
         <div><span class="label">IPK :</span> <span class="value"><?php echo number_format($IPK, 2); ?></span></div>
     </div>
-
+</section>
 </body>
 </html>
 
