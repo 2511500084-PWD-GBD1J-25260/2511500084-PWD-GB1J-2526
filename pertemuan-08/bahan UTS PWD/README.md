@@ -2,11 +2,16 @@
 
 silahkan sesuaikan dengan milik kalian masing-masing:<br><br>
 Hari ini, Rabu 12.NOV.2025, saya:<br>
-NIM: 0344300002<br>
-Nama: Yohanes Setiawan Japriadi<br>
-Kelompok: TI1A<br>
+NIM: 2511500084<br>
+Nama: Salsabillah Rimadany<br>
+Kelompok: GB1J<br>
 <br>
 Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
-  <li>silahkan diisi sesuai proses pengerjaan kalian masing-masing</li>
+  <li>mengunduh bahan UTS PWD</li>
+  <li>mengekstrak bahan UTS PWD ke dalam folder pertemuan-08</li>
+  <li>menambahkan section baru Biodata Sederhana Mahasiswa diatas section about</li>
+  <li>menambahkan input NIM, Nama lengkap, tempat lahir, tanggal lahir, hobi, pasangan, pekerjaan, nama orang tua, nama kakak, dan nama adik</li>
+  <li>menambahkan tombol batal dan kirim</li>
+
 </ol>
