@@ -20,6 +20,6 @@ $_SESSION["sesPekerjaan"] = $sesPekerjaan;
 $_SESSION["sesNama_ortu"] = $sesNama_ortu;
 $_SESSION["sesNama_kakak"] = $sesNama_kakak;
 $_SESSION["sesNama_adik"] = $sesNama_adik;
-header(header: "Location: index.php");
+header("Location: index.php");
 
 ?>
