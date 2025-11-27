@@ -12,4 +12,6 @@
   <li>echo session ke nilai label section contact</li>
   <li>echo session ke nilai label section contact selesai</li>
   <li>memodifkan baris kode (10-19) menjadi bentuk array</li>
+  <li>menghapus dan mengubah baris kode (23-32) di folder proses.php</li>
+  <li>menghapus dan mengubah baris kode (19-67) di folder index.php</li>
 </ol>
