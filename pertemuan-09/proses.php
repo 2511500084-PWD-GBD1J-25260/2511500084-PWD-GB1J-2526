@@ -19,11 +19,6 @@ $arrBiodata = [
 "kakak" => $_POST["txtNmKakak"] ?? "",
 "adik" => $_POST["txtNmAdik"] ?? "",
 ];
-foreach ($dataBiodata as $k => $v) {
-    echo "<p><strong>$k</strong>: $v</p>";
-}
-$_SESSION["biodata"] = $arrBiodata;
-header("location: index.php#about");
 
 $_SESSION["txtNim"] = $txtNim;
 $_SESSION["txtNmLengkap"] = $txtNmLengkap;
