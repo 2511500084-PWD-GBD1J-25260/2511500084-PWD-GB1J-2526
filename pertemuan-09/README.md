@@ -16,4 +16,5 @@
   <li>menghapus dan mengubah baris kode (19-67) di folder index.php</li>
   <li>menambahkan baris kode baru untuk menampilkan array menggunakan looping foreach</li>
   <li>menghapus baris 130-140 untuk menampilkan isi array associative $fieldConfig</li>
+  <li>membuat folder baru dengan nama fungsi.php di folder pertemuan-09</li>
 </ol>
