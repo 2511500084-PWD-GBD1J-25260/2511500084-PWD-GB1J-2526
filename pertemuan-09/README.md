@@ -18,4 +18,5 @@
   <li>menghapus baris 130-140 untuk menampilkan isi array associative $fieldConfig</li>
   <li>membuat folder baru dengan nama fungsi.php di folder pertemuan-09</li>
   <li>menambahkan format tanggal</li>
+  <li>menambahkan lahi kode pada fungsi.php untuk merender hasil atau output biodata</li>
 </ol>
