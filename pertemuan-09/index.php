@@ -119,8 +119,9 @@ $fieldConfig = [
 ?>
     <section id="about">
       <h2>Tentang Saya</h2>
-      <?= tampilkanBiodata( $fieldConfig, $biodata) ?>
+      <?= tampilkanBiodata(conf: $fieldConfig, arr: $biodata) ?>
 </section>
+
     <section id="contact">
       <h2>Kontak Kami</h2>
       <form action="proses.php" method="POST">
