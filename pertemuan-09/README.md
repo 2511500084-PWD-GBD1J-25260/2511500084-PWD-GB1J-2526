@@ -20,4 +20,5 @@
   <li>menambahkan format tanggal</li>
   <li>menambahkan lagi kode pada fungsi.php untuk merender hasil atau output biodata</li>
   <li>menghapus baris 123-129 dan menggantikannya menjadi satu baris</li>
+  <li>menambahkan kode untuk menyertakan file fungsi.php dengan kode require_once</li>
 </ol>
