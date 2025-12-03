@@ -14,4 +14,5 @@
   <li>memodifkan baris kode (10-19) menjadi bentuk array</li>
   <li>menghapus dan mengubah baris kode (23-32) di folder proses.php</li>
   <li>menghapus dan mengubah baris kode (19-67) di folder index.php</li>
+  <li>menambahkan baris kode baru untuk menampilkan array menggunakan looping foreach</li>
 </ol>

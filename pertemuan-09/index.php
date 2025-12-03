@@ -116,9 +116,17 @@ $fieldConfig = [
   "kakak" => ["label" => "Nama Kakak:", "suffix" => ""],
   "adik" => ["label" => "Nama Adik:", "suffix" => ""],
 ];
-?>
+?
     <section id="about">
       <h2>Tentang Saya</h2>
+      <?php foreach ($fieldConfig as $kunci => $metadata): ?> 
+        <p>
+         <strong><?= $metadata["label"] ?></strong>
+         <?= htmlspecialchars(string: $biodata[$kunci] ?? "") ?>
+         <?=$metadata["suffix"] ?>
+       </p>
+      <?php endforeach; ?>
+      
       <p><strong>NIM:</strong> <?= $txtNim ?></p>
       <p><strong>Nama Lengkap:</strong> <?= $txtNmLengkap ?> &#128526;</p>
       <p><strong>Tempat Lahir:</strong> <?= $txtT4Lhr ?></p>
