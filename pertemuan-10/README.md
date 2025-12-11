@@ -6,4 +6,5 @@
 <li>mengetikan kode pada file koneksi.php</li>
 <li>memasangkan phpmyadmin</li>
 <li>membuat database db_pwd2025</li>
+<li>membuat tabel tbl_tamu di dalam database db_pwd2025</li>
 </ol>
