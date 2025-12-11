@@ -9,4 +9,5 @@
 <li>membuat tabel tbl_tamu di dalam database db_pwd2025</li>
 <li>membuat file baru dengan nama read.php</li>
 <li>mengetikan kode pada file read.php</li>
+<li>membuat 3 record untuk tbl_tamu</li>
 </ol>
