@@ -4,4 +4,6 @@
 <li>menghapus file index.html</li>
 <li>membuat file baru dengan nama koneksi.php</li>
 <li>mengetikan kode pada file koneksi.php</li>
+<li>memasangkan phpmyadmin</li>
+<li>membuat database db_pwd2025</li>
 </ol>
