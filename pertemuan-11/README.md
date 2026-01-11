@@ -17,4 +17,5 @@
 <li>update fungsi.php untuk helper redirect sederhana</li>
 <li>mengupdate index.php</li>
 <li>rewrite proses.php</li>
+<li>menambahkan kolom nomor urut</li>
 </ol>
