@@ -14,4 +14,7 @@
 <li>memodif kode pada read_inc.php</li>
 <li>mengganti baris kode 146 pada file index.php</li>
 <li>menghapus baris kode 133-141</li>
+<li>update fungsi.php untuk helper redirect sederhana</li>
+<li>mengupdate index.php</li>
+<li>rewrite proses.php</li>
 </ol>
