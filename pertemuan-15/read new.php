@@ -1,7 +1,7 @@
 <?php
   session_start();
   require 'koneksi.php';
-  require 'fungsi.php';
+    require 'fungsi.php';
 
   $sql = "SELECT * FROM iyupp ORDER BY cid DESC";
   $q = mysqli_query($conn, $sql);
