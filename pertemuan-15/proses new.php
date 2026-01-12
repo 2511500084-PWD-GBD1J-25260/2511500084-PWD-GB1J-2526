@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__ . '/read new.php';
+require_once __DIR__ . '/fungsi.php';
 ?>
 
 <!DOCTYPE html>
