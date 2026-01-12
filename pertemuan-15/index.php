@@ -165,7 +165,7 @@ require_once __DIR__ . '/fungsi.php';
       <br>
       <hr>
       <h2>Yang menghubungi kami</h2>
-      <?php include 'read new.php'; ?>
+      <?php include 'read_inc.php'; ?>
     </section>
   </main>
 
