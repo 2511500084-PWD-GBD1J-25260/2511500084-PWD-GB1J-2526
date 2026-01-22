@@ -87,7 +87,7 @@ include 'koneksi.php';
                 <tr>
                     <td><?php echo $no++; ?></td>
                     <td>
-                        <a class="link-aksi" href="proses new.php?nim=<?php echo $d['nim']; ?>">Edit</a> | 
+                        <a class="link-aksi" href="edit_iyup.php?nim=<?php echo $d['nim']; ?>">Edit</a> | 
                         
                         <a class="link-aksi link-delete" 
                            href="proses_delete.php?nim=<?php echo $d['nim']; ?>" 

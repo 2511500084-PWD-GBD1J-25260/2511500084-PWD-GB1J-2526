@@ -37,10 +37,35 @@ require_once __DIR__ . '/fungsi.php';
       ?>
       <p>Ini contoh paragraf HTML.</p>
     </section>
+  
+
+</section>
 
     <section id="biodata">
       <h2>Biodata Sederhana Mahasiswa</h2>
-      <form action="proses iyupp.php" method="POST">
+      
+      <?php
+    $flash_sukses1 = $_SESSION['flash_sukses1'] ?? ''; #jika query sukses
+    $flash_error1  = $_SESSION['flash_error1'] ?? ''; #jika ada error
+    $old1          = $_SESSION['old1'] ?? []; #untuk nilai lama form
+
+    unset($_SESSION['flash_sukses1'], $_SESSION['flash_error1'], $_SESSION['old1']); #bersihkan 3 session ini
+    ?>
+  <?php if (!empty($flash_sukses1)): ?>
+    <div style="padding:10px; margin-bottom:15px; background:#d4edda; color:#155724; border: 1px solid #c3e6cb; border-radius:6px;">
+      <strong>Sukses!</strong> <?= $flash_sukses1; ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if (!empty($flash_error1)): ?>
+    <div style="padding:10px; margin-bottom:15px; background:#f8d7da; color:#721c24; border: 1px solid #f5c6cb; border-radius:6px;">
+      <strong>Error:</strong> <?= $flash_error1; ?>
+    </div>
+  <?php endif; ?>
+  <form action="proses.php" method="POST">
+    ...
+  </form>
+      <form action="proses.php" method="POST">
 
         <label for="txtNim"><span>NIM:</span>
           <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" required>
@@ -104,7 +129,7 @@ require_once __DIR__ . '/fungsi.php';
     ];
     ?>
 
-    <section id="about">
+    <section id="contact">
       <h2>Tentang Saya</h2>
       <?= tampilkanBiodata($fieldConfig, $biodata) ?>
     </section>
@@ -132,7 +157,7 @@ require_once __DIR__ . '/fungsi.php';
         </div>
       <?php endif; ?>
 
-      <form action="proses iyupp.php" method="POST">
+      <form action="proses.php" method="POST">
 
         <label for="txtNama"><span>Nama:</span>
           <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama"

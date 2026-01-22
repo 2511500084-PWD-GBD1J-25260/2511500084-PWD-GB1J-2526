@@ -3,41 +3,56 @@
   require __DIR__ . '/koneksi.php';
   require_once __DIR__ . '/fungsi.php';
 
-  #validasi cid wajib angka dan > 0
-  $cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT, [
-    'options' => ['min_range' => 1]
-  ]);
-
-  if (!$cid) {
-    $_SESSION['flash_error'] = 'CID Tidak Valid.';
-    redirect_ke('read.php');
-  }
-
-  /*
-    Prepared statement untuk anti SQL injection.
-    menyiapkan query UPDATE dengan prepared statement 
-    (WAJIB WHERE cid = ?)
+  /* LOGIKA 1: PENGHAPUSAN MAHASISWA (NIM)
+    Jika terdapat parameter 'nim' di URL
   */
-  $stmt = mysqli_prepare($conn, "DELETE FROM tbl_tamu
-                                WHERE cid = ?");
-  if (!$stmt) {
-    #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
-    $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
+  if (isset($_GET['nim'])) {
+    $nim = bersihkan($_GET['nim']);
+
+    if (empty($nim)) {
+        $_SESSION['flash_error'] = 'NIM tidak valid.';
+        redirect_ke('read_iyup.php');
+    }
+
+    $stmt = mysqli_prepare($conn, "DELETE FROM iyupp WHERE nim = ?");
+    mysqli_stmt_bind_param($stmt, "s", $nim);
+
+    if (mysqli_stmt_execute($stmt)) {
+        $_SESSION['flash_sukses1'] = 'Data mahasiswa berhasil dihapus.';
+    } else {
+        $_SESSION['flash_error1'] = 'Gagal menghapus data mahasiswa.';
+    }
+
+    mysqli_stmt_close($stmt);
+    redirect_ke('read_iyup.php');
+  }
+
+  /* LOGIKA 2: PENGHAPUSAN BUKU TAMU (CID)
+    Jika terdapat parameter 'cid' di URL
+  */
+  if (isset($_GET['cid'])) {
+    $cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT, [
+      'options' => ['min_range' => 1]
+    ]);
+
+    if (!$cid) {
+      $_SESSION['flash_error1'] = 'ID Tamu tidak valid.';
+      redirect_ke('read.php'); // Asumsi read.php adalah halaman buku tamu
+    }
+
+    $stmt = mysqli_prepare($conn, "DELETE FROM tbl_tamu WHERE cid = ?");
+    mysqli_stmt_bind_param($stmt, "i", $cid);
+
+    if (mysqli_stmt_execute($stmt)) {
+      $_SESSION['flash_sukses'] = 'Data tamu berhasil dihapus.';
+    } else {
+      $_SESSION['flash_error'] = 'Gagal menghapus data tamu.';
+    }
+
+    mysqli_stmt_close($stmt);
     redirect_ke('read.php');
   }
 
-  #bind parameter dan eksekusi (s = string, i = integer)
-  mysqli_stmt_bind_param($stmt, "i", $cid);
-
-  if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
-    /*
-      Redirect balik ke read.php dan tampilkan info sukses.
-    */
-    $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah dihapus.';
-  } else { #jika gagal, simpan kembali old value dan tampilkan error umum
-    $_SESSION['flash_error'] = 'Data gagal dihapus. Silakan coba lagi.';
-  }
-  #tutup statement
-  mysqli_stmt_close($stmt);
-
-  redirect_ke('read.php');
+  // Jika tidak ada parameter nim atau cid, kembalikan ke halaman awal
+  redirect_ke('index.php');
+?>

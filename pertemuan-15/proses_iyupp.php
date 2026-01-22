@@ -5,7 +5,7 @@ require_once __DIR__ . '/fungsi.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     $_SESSION['flash_error1'] = 'Akses ditolak.';
-    redirect_ke('read new.php');
+    redirect_ke('read_iyup.php');
 }
 
 $nim            = bersihkan($_POST['nim'] ?? '');
@@ -27,10 +27,10 @@ if ($tanggal_lahir === '') $errors[] = "Tanggal Lahir wajib diisi.";
 if (!empty($errors)) {
     $_SESSION['old1'] = $_POST;
     $_SESSION['flash_error1'] = implode('<br>', $errors);
-    redirect_ke("proses new.php?nim=$nim");
+    redirect_ke("edit_iyup.php?nim=$nim");
 }
 
-$sql = "UPDATE mahasiswa SET 
+$sql = "UPDATE iyupp SET 
         nama_lengkap=?, tempat_lahir=?, tanggal_lahir=?,
         hobi=?, pasangan=?, pekerjaan=?,
         nama_orang_tua=?, nama_kakak=?, nama_adik=?
@@ -40,7 +40,7 @@ $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
     $_SESSION['flash_error1'] = "Kesalahan sistem.";
-    redirect_ke("proses new.php?nim=$nim");
+    redirect_ke("edit_iyup.php?nim=$nim");
 }
 
 mysqli_stmt_bind_param(
@@ -54,8 +54,8 @@ mysqli_stmt_bind_param(
 if (mysqli_stmt_execute($stmt)) {
     unset($_SESSION['old1']);
     $_SESSION['flash_sukses1'] = "Data mahasiswa $nim berhasil diperbarui.";
-    redirect_ke('read new.php');
+    redirect_ke('read_iyup.php');
 } else {
     $_SESSION['flash_error1'] = "Gagal memperbarui data.";
-    redirect_ke("proses new.php?nim=$nim");
+    redirect_ke("edit_iyup.php?nim=$nim");
 }
